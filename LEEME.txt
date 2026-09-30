@@ -1,0 +1,57 @@
+GYM++ ELITE — CÓMO USAR TU APP
+================================
+
+QUÉ CAMBIÓ EN ESTA VERSIÓN
+---------------------------
+✔ Nueva pestaña "PERFIL": guarda tu edad, tu objetivo (definición/mantenimiento/
+  volumen) y cuántos días entrenas por semana. Se usa automáticamente para
+  calcular tus calorías y no se borra al cerrar la app.
+✔ Hábitos totalmente editables: en PERFIL puedes agregar o quitar los hábitos
+  que ves cada día (ej. "Dormir 8h", "Agua 2L"), y crear los tuyos.
+✔ Las calorías del día se reinician solas cuando cambia el día, incluso si
+  dejaste la app abierta en el navegador.
+✔ Botones para exportar/importar un respaldo de tus datos (.json) y para
+  borrar todo si algún día quieres empezar de nuevo.
+✔ Ahora es una app instalable (PWA): tiene ícono propio, pantalla de carga y
+  puede funcionar sin internet una vez instalada.
+
+CÓMO INSTALARLA EN TU CELULAR (recomendado, la app queda como una app real)
+----------------------------------------------------------------------------
+Para que el ícono, el modo "pantalla completa" y el funcionamiento sin
+internet funcionen de verdad, el navegador necesita que estos archivos estén
+en un sitio web (con https), no solo abiertos desde tus archivos. La forma
+más simple y gratis (sin escribir código):
+
+1. Ve a https://app.netlify.com/drop desde tu computadora.
+2. Arrastra esta carpeta completa (con index.html, manifest.json, sw.js,
+   icon-192.png, icon-512.png) a la página.
+3. Netlify te da un link (ej: https://tu-app-123.netlify.app). Ábrelo desde
+   el navegador de tu celular (Chrome en Android o Safari en iPhone).
+4. En Chrome (Android): toca los tres puntos ⋮ → "Instalar app" o
+   "Añadir a pantalla de inicio".
+   En Safari (iPhone): toca el botón de compartir 📤 → "Añadir a pantalla
+   de inicio".
+5. Listo: te queda un ícono como cualquier otra app, se abre a pantalla
+   completa y guarda tus datos en el celular.
+
+Alternativa igual de gratis: subir la carpeta a GitHub y activar "GitHub
+Pages" en la configuración del repositorio.
+
+CÓMO USARLA SIN SUBIRLA A NINGÚN LADO (más simple, con una limitación)
+------------------------------------------------------------------------
+Puedes abrir directamente index.html en el navegador de tu celular y usar
+"Añadir a pantalla de inicio". Vas a tener un ícono y tus datos SÍ se
+guardan en el celular igual. La única diferencia es que no funcionará sin
+internet ni se verá 100% a pantalla completa (por una restricción de los
+navegadores con archivos locales), pero todo lo demás — hábitos, medidas,
+calorías, perfil — funciona exactamente igual.
+
+TUS DATOS
+---------
+Todo se guarda en el almacenamiento local del navegador donde abras la app
+(localStorage). Eso significa:
+- No se borra al cerrar la app o el celular.
+- Si usas la MISMA app/link cada vez, tus datos siguen ahí.
+- Si borras los datos de navegación del navegador, o desinstalas la app,
+  se pierden — por eso agregamos el botón "Exportar respaldo" en PERFIL,
+  úsalo de vez en cuando para tener una copia de seguridad.
